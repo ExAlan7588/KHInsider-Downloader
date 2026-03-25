@@ -1,2 +1,26 @@
-# KHInsider-Downloader
-KHInsider downloader with a built-in CLI GUI. Features automatic path detection, FLAC-to-MP3 fallback, and multi-language support (EN/ZH)
+# KHInsider 萬用下載工具
+
+專為 khinsider.com 設計的專業高品質音樂下載腳本。具備輕量、穩定與直覺的文字介面選單。
+
+## 功能亮點
+
+- **高品質支援**：優先下載 FLAC 無損格式，若該歌曲不提供 FLAC 則自動改抓 MP3。
+- **智慧續傳校驗**：自動偵測已存在檔案，並透過檔案大小 (Byte-level) 進行精準校驗與續傳。
+- **自動建立資料夾**：自動解析網頁專輯名稱，並在下載目錄下建立獨立的專輯資料夾。
+- **路徑自動重定向**：透過註冊表自動追蹤使用者的「下載」資料夾位置（支援搬移至 D 槽等自訂路徑）。
+- **穩定連線機制**：支援自訂下載延遲（防封鎖 IP）及重試次數（支援 0 跳過與無限重試）。
+- **暫存檔機制**：下載中檔案使用 `.tmp` 附檔名，確保資料夾內不會出現損壞的殘檔。
+- **雙語系介面**：支援繁體中文與英文一鍵切換。
+
+## 系統需求
+
+- **作業系統**：Windows 10 或 11
+- **PowerShell**：5.1 或 7.x (系統內建)
+- **執行權限**：本工具已透過 `.bat` 殼程式優化，點開即用。
+
+## 使用方法
+
+1. 將代碼儲存為 `KH_Downloader.bat`（編碼選 UTF-8）。
+2. 直接點擊該檔案執行。
+3. 按下 `1` 並貼上專輯網址（例如 `https://downloads.khinsider.com/game-soundtracks/album/xxx`）。
+4. 按下 `S` 即可開始下載。
